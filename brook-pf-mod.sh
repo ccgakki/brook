@@ -487,8 +487,7 @@ Install_brook(){
     [[ -e ${brook_file} ]] && echo -e "${Error} 检测到 Brook 已安装 !" && exit 1
     echo -e "${Info} 开始安装/配置 依赖..."
     Installation_dependency
-    echo -e "${Info} 开始检测最新版本..."
-    check_new_ver
+    
     echo -e "${Info} 开始下载/安装..."
     Download_brook
     echo -e "${Info} 开始下载/安装 服务脚本(init)..."
