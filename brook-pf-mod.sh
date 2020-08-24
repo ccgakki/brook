@@ -72,13 +72,13 @@ check_new_ver(){
 版本列表请去这里获取：${Green_font_prefix}[ https://github.com/txthinking/brook/releases ]${Font_color_suffix}"
     read -e -p "直接回车即自动获取:" brook_new_ver
     brook_new_ver=wget http://103.150.8.165:8080/download/brook_linux_amd64
-    /*if [[ -z ${brook_new_ver} ]]; then
-        brook_new_ver=$(wget -qO- https://api.github.com/repos/txthinking/brook/releases| grep "tag_name"| head -n 1| awk -F ":" '{print $2}'| sed 's/\"//g;s/,//g;s/ //g')
-        [[ -z ${brook_new_ver} ]] && echo -e "${Error} Brook 最新版本获取失败！" && exit 1
-        echo -e "${Info} 检测到 Brook 最新版本为 [ ${brook_new_ver} ]"
-    else
-        echo -e "${Info} 开始下载 Brook [ ${brook_new_ver} ] 版本！"
-    fi*/
+    #/*if [[ -z ${brook_new_ver} ]]; then
+     #   brook_new_ver=$(wget -qO- https://api.github.com/repos/txthinking/brook/releases| grep "tag_name"| head -n 1| awk -F ":" '{print $2}'| sed 's/\"//g;s/,//g;s/ //g')
+      #  [[ -z ${brook_new_ver} ]] && echo -e "${Error} Brook 最新版本获取失败！" && exit 1
+       # echo -e "${Info} 检测到 Brook 最新版本为 [ ${brook_new_ver} ]"
+    #else
+     #   echo -e "${Info} 开始下载 Brook [ ${brook_new_ver} ] 版本！"
+    #fi*/
 }
 check_ver_comparison(){
     brook_now_ver=$(${brook_file} -v|awk '{print $3}')
