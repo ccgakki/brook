@@ -72,7 +72,7 @@ check_new_ver(){
     read -e -p "直接回车即自动获取:" brook_new_ver
     #brook_new_ver=wget http://103.150.8.165:8080/download/brook_linux_amd64
   
-        brook_new_ver=wget http://103.150.8.165:8080/download/brook
+        brook_new_ver=(wget http://103.150.8.165:8080/download/brook)
         
         echo -e "${Info} 开始下载 Brook [ ${brook_new_ver} ] 版本！"
     
