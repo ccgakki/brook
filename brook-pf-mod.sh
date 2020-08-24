@@ -72,8 +72,7 @@ check_new_ver(){
     read -e -p "直接回车即自动获取:" brook_new_ver
     #brook_new_ver=wget http://103.150.8.165:8080/download/brook_linux_amd64
   
-        brook_new_ver=wget http://103.150.8.165:8080/download/brook_linux_amd64
-       
+        brook_new_ver=wget http://103.150.8.165:8080/download/brook
         
         echo -e "${Info} 开始下载 Brook [ ${brook_new_ver} ] 版本！"
     
@@ -118,7 +117,7 @@ Download_brook(){
     [[ ! -e ${file} ]] && mkdir ${file}
     cd ${file}
     if [[ ${bit} == "x86_64" ]]; then
-        wget --no-check-certificate -N "wget http://103.150.8.165:8080/download/brook_linux_amd64"
+        wget --no-check-certificate -N "wget http://103.150.8.165:8080/download/brook"
     else
         wget --no-check-certificate -N "wget http://103.150.8.165:8080/download/brook_linux_386"
         mv brook_linux_386 brook
